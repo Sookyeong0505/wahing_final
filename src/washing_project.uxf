@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>100</x>
+      <y>60</y>
+      <w>340</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>MemberMenu
+(View)
+--
+- sc: Scanner
+- machineList: List&lt;WashineMachine&gt;  
+- memberController: MemberController
+
+--
++ startMenu(): void
+- managerMenu(member:Member): void
+- login() : void
+- displayMemberList
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>350</x>
+      <y>600</y>
+      <w>350</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>서비스  (Member member)
+--
+1. 일반 세탁
+	showServiceName(member, machine, serviceName)
+	
+2. 따뜻한 물세탁
+	showServiceName()
+	
+3. 초강력 세탁
+	showServiceName()
+	
+4. 뇌 세탁
+	showServiceName()
+	
+0. 사용자 메뉴로
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>100</x>
+      <y>270</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>시작 프로그램
+--
+Member member
+--
+1. 로그인
+2. 회원가입
+3. 아이디 조회
+4. 회원 정보 변경
+5. 회원 탈퇴
+0. 프로그램 종료
+
+666. 관리자 메뉴
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>100</x>
+      <y>470</y>
+      <w>210</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>관리자 메뉴 (Member member)
+--
+1. 전체회원 조회
+
+2. 포인트 중전내역 조회
+
+0. 프로그램 종료</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>780</x>
+      <y>40</y>
+      <w>340</w>
+      <h>470</h>
+    </coordinates>
+    <panel_attributes>MemberController
+(Controller)
+--
+- MemberService memberService
+--
+
+
++ login(String id, String password) : Member
+
++ findAll(String table) : List&lt;Member&gt;
+
++ findAllMemberLog(String table) : List&lt;Member&gt;
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>100</x>
+      <y>600</y>
+      <w>210</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>사용자 메뉴 (Member member)
+--
+1. 세탁하기
+	serviceMenu(Member)
+	
+2. 포인트 충전
+	chargePoint(Member)
+	
+3. 회원정보 조회
+	memberInfo(Member)
+
+0. 로그아웃</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>740</x>
+      <y>600</y>
+      <w>210</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>사용자 메뉴 (Member member)
+--
+1. 세탁하기
+	serviceMenu(Member)
+	
+2. 포인트 충전
+	chargePoint(Member)
+	
+3. 회원정보 조회
+	memberInfo(Member)
+
+0. 로그아웃</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
